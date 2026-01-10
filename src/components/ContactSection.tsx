@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from 'lucide-react';
 import { saveContactSubmission } from '@/lib/contactStorage';
 import { useToast } from '@/hooks/use-toast';
 
@@ -17,6 +17,13 @@ const contactInfo = [
     title: 'Phone',
     content: '+91 98765 43210',
     link: 'tel:+919876543210',
+  },
+  {
+    icon: MessageCircle,
+    title: 'WhatsApp',
+    content: '+91 98765 43210',
+    link: 'https://wa.me/919876543210?text=Hello! I would like to inquire about your services.',
+    isExternal: true,
   },
   {
     icon: Mail,
@@ -97,7 +104,12 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-semibold text-navy">{item.title}</h4>
                     {item.link ? (
-                      <a href={item.link} className="text-muted-foreground hover:text-gold transition-colors">
+                      <a 
+                        href={item.link} 
+                        className="text-muted-foreground hover:text-gold transition-colors"
+                        target={(item as any).isExternal ? '_blank' : undefined}
+                        rel={(item as any).isExternal ? 'noopener noreferrer' : undefined}
+                      >
                         {item.content}
                       </a>
                     ) : (

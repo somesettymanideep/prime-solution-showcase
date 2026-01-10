@@ -5,37 +5,50 @@ const testimonials = [
   {
     name: 'Rajesh Kumar',
     company: 'TechStart Solutions Pvt Ltd',
-    text: 'Prime Solutions transformed our office space with their exceptional electrical and signage work. Professional, timely, and excellent quality. Highly recommended!',
+    text: 'Prime Solutions transformed our office space with their exceptional electrical and signage work. Professional, timely, and excellent quality.',
   },
   {
     name: 'Priya Sharma',
     company: 'Global Edu Institute',
-    text: 'We have been working with Prime Solutions for over 3 years. Their printing and stationery services are top-notch. They understand our needs perfectly.',
+    text: 'We have been working with Prime Solutions for over 3 years. Their printing and stationery services are top-notch.',
   },
   {
     name: 'Mohammed Arif',
     company: 'Sunrise Commercial Complex',
-    text: 'The team handled our complete electrical and plumbing setup for a 50,000 sq ft commercial space. Impeccable work and excellent project management.',
+    text: 'The team handled our complete electrical and plumbing setup for a 50,000 sq ft commercial space. Impeccable work!',
   },
   {
     name: 'Lakshmi Reddy',
     company: 'Medicore Healthcare',
-    text: 'From acrylic signage to printed materials, Prime Solutions delivered everything on time and within budget. A truly reliable business partner.',
+    text: 'From acrylic signage to printed materials, Prime Solutions delivered everything on time and within budget.',
+  },
+  {
+    name: 'Anil Gupta',
+    company: 'Innovate Tech Park',
+    text: 'Outstanding service for our entire campus. The electrical work was done with precision and ahead of schedule.',
+  },
+  {
+    name: 'Sunita Rao',
+    company: 'Greenfield Apartments',
+    text: 'Reliable plumbing services that saved us time and money. Their team is professional and courteous.',
   },
 ];
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Calculate max index based on showing 3 at a time
+  const maxIndex = Math.max(0, testimonials.length - 3);
+
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+      setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [maxIndex]);
 
-  const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  const prevSlide = () => setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+  const nextSlide = () => setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
 
   return (
     <section id="testimonials" className="section-padding bg-cream">
@@ -51,32 +64,32 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Testimonial Carousel */}
-        <div className="relative max-w-4xl mx-auto">
+        {/* Testimonial Carousel - 3 slides visible */}
+        <div className="relative">
           <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
             >
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="w-full flex-shrink-0 px-4">
-                  <div className="bg-card rounded-2xl p-8 md:p-12 shadow-card text-center">
+                <div key={index} className="w-full md:w-1/3 flex-shrink-0 px-3">
+                  <div className="bg-card rounded-2xl p-6 md:p-8 shadow-card h-full flex flex-col">
                     {/* Quote Icon */}
-                    <div className="w-16 h-16 mx-auto bg-gold/10 rounded-full flex items-center justify-center mb-6">
-                      <Quote className="w-8 h-8 text-gold" />
+                    <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center mb-4">
+                      <Quote className="w-6 h-6 text-gold" />
                     </div>
 
                     {/* Testimonial Text */}
-                    <p className="text-lg md:text-xl text-foreground leading-relaxed mb-8 italic">
+                    <p className="text-foreground leading-relaxed mb-6 italic flex-grow">
                       "{testimonial.text}"
                     </p>
 
                     {/* Client Info */}
-                    <div>
-                      <h4 className="font-display text-xl font-bold text-navy">
+                    <div className="border-t border-border pt-4">
+                      <h4 className="font-display text-lg font-bold text-navy">
                         {testimonial.name}
                       </h4>
-                      <p className="text-gold font-medium">
+                      <p className="text-gold text-sm font-medium">
                         {testimonial.company}
                       </p>
                     </div>
@@ -98,14 +111,14 @@ const TestimonialsSection = () => {
             
             {/* Dots */}
             <div className="flex gap-2">
-              {testimonials.map((_, index) => (
+              {Array.from({ length: maxIndex + 1 }).map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                     index === currentIndex ? 'bg-gold w-6' : 'bg-navy/30'
                   }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
+                  aria-label={`Go to testimonial set ${index + 1}`}
                 />
               ))}
             </div>
@@ -119,6 +132,15 @@ const TestimonialsSection = () => {
             </button>
           </div>
         </div>
+
+        {/* Mobile: Single slide view */}
+        <style>{`
+          @media (max-width: 768px) {
+            .testimonials-mobile-single > div > div {
+              width: 100% !important;
+            }
+          }
+        `}</style>
       </div>
     </section>
   );

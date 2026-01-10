@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
+import { saveContactSubmission } from '@/lib/contactStorage';
+import { useToast } from '@/hooks/use-toast';
 
 const contactInfo = [
   {
@@ -30,6 +32,8 @@ const contactInfo = [
 ];
 
 const ContactSection = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -40,8 +44,24 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    
+    try {
+      saveContactSubmission(formData);
+      toast({
+        title: "Message Sent Successfully!",
+        description: "We'll get back to you within 24 hours.",
+      });
+      setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -147,8 +167,8 @@ const ContactSection = () => {
                   required
                 />
               </div>
-              <Button type="submit" variant="gold" size="xl" className="w-full group">
-                Send Message
+              <Button type="submit" variant="gold" size="xl" className="w-full group" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : 'Send Message'}
                 <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </form>

@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -15,11 +15,19 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Prime Solutions Custom Variants
+        gold: "bg-gradient-to-r from-gold to-gold-dark text-navy-dark font-semibold shadow-gold hover:shadow-lg hover:scale-[1.02]",
+        goldOutline: "border-2 border-gold text-gold bg-transparent hover:bg-gold hover:text-navy-dark font-semibold",
+        navy: "bg-gradient-to-br from-navy to-navy-dark text-gold font-semibold shadow-md hover:shadow-lg hover:scale-[1.02]",
+        navyOutline: "border-2 border-navy text-navy bg-transparent hover:bg-navy hover:text-gold font-semibold",
+        hero: "bg-gradient-to-r from-gold to-gold-dark text-navy-dark font-bold shadow-gold hover:shadow-lg hover:scale-[1.02] text-base",
+        heroOutline: "border-2 border-gold/80 text-gold bg-transparent hover:bg-gold/10 font-semibold text-base",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-14 rounded-lg px-10 text-base",
         icon: "h-10 w-10",
       },
     },

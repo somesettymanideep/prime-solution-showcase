@@ -2,6 +2,8 @@ import Header from '@/components/Header';
 import HeroSlider from '@/components/HeroSlider';
 import AboutSection from '@/components/AboutSection';
 import ServicesSection from '@/components/ServicesSection';
+import MissionVisionValues from '@/components/MissionVisionValues';
+import IdealForSection from '@/components/IdealForSection';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import CTASection from '@/components/CTASection';
 import TestimonialsSection from '@/components/TestimonialsSection';
@@ -17,6 +19,8 @@ const Index = () => {
         <HeroSlider />
         <AboutSection />
         <ServicesSection />
+        <MissionVisionValues />
+        <IdealForSection />
         <WhyChooseUs />
         <CTASection />
         <TestimonialsSection />

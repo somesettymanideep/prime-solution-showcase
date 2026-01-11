@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import logo from '@/assets/logo.png';
+
+const WHATSAPP_NUMBER = '919876543210'; // Replace with actual number
+const WHATSAPP_MESSAGE = 'Hello! I would like to inquire about your services.';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,9 +56,18 @@ const Header = () => {
 
         {/* CTA Button */}
         <div className="hidden lg:flex items-center gap-4">
-          <a href="tel:+919876543210" className="flex items-center gap-2 text-gold">
+          <a href="tel:+919876543210" className="flex items-center gap-2 text-gold hover:text-gold/80 transition-colors">
             <Phone className="w-4 h-4" />
             <span className="font-medium">+91 98765 43210</span>
+          </a>
+          <a
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-green-500 hover:text-green-400 transition-colors"
+            aria-label="Chat on WhatsApp"
+          >
+            <MessageCircle className="w-5 h-5" />
           </a>
           <Button variant="gold" size="default">
             Get a Quote
@@ -90,6 +102,15 @@ const Header = () => {
               <a href="tel:+919876543210" className="flex items-center gap-2 text-gold">
                 <Phone className="w-4 h-4" />
                 <span className="font-medium">+91 98765 43210</span>
+              </a>
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-green-500"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span className="font-medium">Chat on WhatsApp</span>
               </a>
               <Button variant="gold" size="lg" className="w-full">
                 Get a Quote

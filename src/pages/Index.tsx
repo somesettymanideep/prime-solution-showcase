@@ -7,6 +7,7 @@ import IdealForSection from '@/components/IdealForSection';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import CTASection from '@/components/CTASection';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import ClientsCarousel from '@/components/ClientsCarousel';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -24,6 +25,7 @@ const Index = () => {
         <WhyChooseUs />
         <CTASection />
         <TestimonialsSection />
+        <ClientsCarousel />
         <ContactSection />
       </main>
       <Footer />

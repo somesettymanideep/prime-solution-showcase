@@ -3,12 +3,21 @@ import { Printer, Layers, Wind, Zap, Droplets, BookOpen, Box, Wrench, X, Chevron
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 
+import servicePrinting from '@/assets/service-printing.jpg';
+import serviceSignage from '@/assets/service-signage.jpg';
+import serviceHvac from '@/assets/service-hvac.jpg';
+import serviceElectrical from '@/assets/service-electrical.jpg';
+import servicePlumbing from '@/assets/service-plumbing.jpg';
+import serviceStationery from '@/assets/service-stationery.jpg';
+import serviceSsMaterials from '@/assets/service-ss-materials.jpg';
+import serviceSsFabrication from '@/assets/service-ss-fabrication.jpg';
+
 const services = [
   {
     icon: Printer,
     title: 'Printing, Branding & Signages',
     description: 'Complete visual branding & promotion solutions for enhanced brand visibility.',
-    image: 'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=600',
+    image: servicePrinting,
     expandedContent: {
       intro: 'End-to-end printing, branding, and signage solutions to enhance brand visibility with durable materials and professional finishing.',
       sections: [
@@ -28,7 +37,7 @@ const services = [
     icon: Layers,
     title: 'Signages & Acrylic Works',
     description: 'Custom signage solutions including glow signs, LED boards, and acrylic displays.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600',
+    image: serviceSignage,
     expandedContent: {
       intro: 'High-quality signage and acrylic products for professional branding and wayfinding solutions.',
       sections: [
@@ -47,7 +56,7 @@ const services = [
     icon: Wind,
     title: 'HVAC Supplies',
     description: 'Complete HVAC equipment and materials for all climate control needs.',
-    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600',
+    image: serviceHvac,
     expandedContent: {
       intro: 'Comprehensive HVAC supplies for residential, commercial, and industrial applications.',
       sections: [
@@ -66,7 +75,7 @@ const services = [
     icon: Zap,
     title: 'Electrical Supplies',
     description: 'Quality electrical materials for safe and efficient installations.',
-    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600',
+    image: serviceElectrical,
     expandedContent: {
       intro: 'Complete range of electrical supplies from trusted brands for all installation needs.',
       sections: [
@@ -81,7 +90,7 @@ const services = [
     icon: Droplets,
     title: 'Plumbing Supplies',
     description: 'Professional plumbing materials and fittings for all requirements.',
-    image: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600',
+    image: servicePlumbing,
     expandedContent: {
       intro: 'High-quality plumbing supplies for residential and commercial projects.',
       sections: [
@@ -96,7 +105,7 @@ const services = [
     icon: BookOpen,
     title: 'Stationery & Office Supplies',
     description: 'Complete office stationery and consumables for everyday operations.',
-    image: 'https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=600',
+    image: serviceStationery,
     expandedContent: {
       intro: 'Everything you need to keep your office running smoothly.',
       sections: [
@@ -115,7 +124,7 @@ const services = [
     icon: Box,
     title: 'SS Materials Supply',
     description: 'High-grade stainless steel products for commercial and industrial use.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600',
+    image: serviceSsMaterials,
     expandedContent: {
       intro: 'Premium stainless steel products with smooth finishing and strong welding, suitable for heavy-duty usage.',
       sections: [
@@ -131,7 +140,7 @@ const services = [
     icon: Wrench,
     title: 'Custom SS Fabrication',
     description: 'Tailored stainless steel fabrication based on your specific requirements.',
-    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600',
+    image: serviceSsFabrication,
     expandedContent: {
       intro: 'We offer custom stainless steel fabrication based on client requirements, designed for functionality, durability, and space optimization.',
       sections: [

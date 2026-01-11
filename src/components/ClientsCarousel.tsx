@@ -1,14 +1,22 @@
 import { useEffect, useRef } from 'react';
+import clientLogo1 from '@/assets/client-logo-1.png';
+import clientLogo2 from '@/assets/client-logo-2.png';
+import clientLogo3 from '@/assets/client-logo-3.png';
+import clientLogo4 from '@/assets/client-logo-4.png';
+import clientLogo5 from '@/assets/client-logo-5.png';
+import clientLogo6 from '@/assets/client-logo-6.png';
+import clientLogo7 from '@/assets/client-logo-7.png';
+import clientLogo8 from '@/assets/client-logo-8.png';
 
 const clients = [
-  { name: 'Client 1', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+1' },
-  { name: 'Client 2', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+2' },
-  { name: 'Client 3', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+3' },
-  { name: 'Client 4', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+4' },
-  { name: 'Client 5', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+5' },
-  { name: 'Client 6', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+6' },
-  { name: 'Client 7', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+7' },
-  { name: 'Client 8', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+8' },
+  { name: 'Techno Solutions', logo: clientLogo1 },
+  { name: 'Global Enterprises', logo: clientLogo2 },
+  { name: 'Infinity Corp', logo: clientLogo3 },
+  { name: 'Metro Industries', logo: clientLogo4 },
+  { name: 'Apex Builders', logo: clientLogo5 },
+  { name: 'Sunrise Hotels', logo: clientLogo6 },
+  { name: 'Medica Hospitals', logo: clientLogo7 },
+  { name: 'Elite Education', logo: clientLogo8 },
 ];
 
 const ClientsCarousel = () => {
@@ -77,7 +85,7 @@ const ClientsCarousel = () => {
               <img
                 src={client.logo}
                 alt={client.name}
-                className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
               />
             </div>
           ))}

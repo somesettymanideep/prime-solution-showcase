@@ -1,14 +1,24 @@
 import { useEffect, useRef } from 'react';
+import clientAmazon from '@/assets/client-amazon.png';
+import clientBet from '@/assets/client-bet.jpg';
+import clientBroadcom from '@/assets/client-broadcom.png';
+import clientUB from '@/assets/client-ub.jpg';
+import clientHuhtamaki from '@/assets/client-huhtamaki.png';
+import clientMechotech from '@/assets/client-mechotech.png';
+import clientMetlife from '@/assets/client-metlife.png';
+import clientMicron from '@/assets/client-micron.png';
+import clientRicetech from '@/assets/client-ricetech.png';
 
 const clients = [
-  { name: 'Client 1', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+1' },
-  { name: 'Client 2', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+2' },
-  { name: 'Client 3', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+3' },
-  { name: 'Client 4', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+4' },
-  { name: 'Client 5', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+5' },
-  { name: 'Client 6', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+6' },
-  { name: 'Client 7', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+7' },
-  { name: 'Client 8', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+8' },
+  { name: 'Amazon', logo: clientAmazon },
+  { name: 'Best Engineering Technologies', logo: clientBet },
+  { name: 'Broadcom', logo: clientBroadcom },
+  { name: 'United Breweries', logo: clientUB },
+  { name: 'Huhtamaki PPL', logo: clientHuhtamaki },
+  { name: 'Mechotech', logo: clientMechotech },
+  { name: 'MetLife', logo: clientMetlife },
+  { name: 'Micron', logo: clientMicron },
+  { name: 'Ricetech', logo: clientRicetech },
 ];
 
 const ClientsCarousel = () => {
@@ -77,7 +87,7 @@ const ClientsCarousel = () => {
               <img
                 src={client.logo}
                 alt={client.name}
-                className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                className="h-16 w-auto object-contain hover:grayscale-0 transition-all duration-300"
               />
             </div>
           ))}

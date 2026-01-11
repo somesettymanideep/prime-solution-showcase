@@ -2,34 +2,41 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Globe } from 'lucide-react';
 import { saveContactSubmission } from '@/lib/contactStorage';
 import { useToast } from '@/hooks/use-toast';
 
 const contactInfo = [
   {
     icon: MapPin,
-    title: 'Address',
-    content: '123, Business Hub, Gachibowli, Hyderabad, Telangana 500032',
+    title: 'Location',
+    content: 'Hyderabad, Telangana',
   },
   {
     icon: Phone,
     title: 'Phone',
-    content: '+91 98765 43210',
-    link: 'tel:+919876543210',
+    content: '9989120202',
+    link: 'tel:+919989120202',
   },
   {
     icon: MessageCircle,
     title: 'WhatsApp',
-    content: '+91 98765 43210',
-    link: 'https://wa.me/919876543210?text=Hello! I would like to inquire about your services.',
+    content: '9989120202',
+    link: 'https://wa.me/919989120202?text=Hello! I would like to inquire about your services.',
     isExternal: true,
   },
   {
     icon: Mail,
     title: 'Email',
-    content: 'info@primesolutions.in',
-    link: 'mailto:info@primesolutions.in',
+    content: 'info.primesolutionshyd@gmail.com',
+    link: 'mailto:info.primesolutionshyd@gmail.com',
+  },
+  {
+    icon: Globe,
+    title: 'Website',
+    content: 'www.primesolutions4u.com',
+    link: 'https://www.primesolutions4u.com',
+    isExternal: true,
   },
   {
     icon: Clock,
@@ -57,7 +64,7 @@ const ContactSection = () => {
       saveContactSubmission(formData);
       toast({
         title: "Message Sent Successfully!",
-        description: "We'll get back to you within 24 hours.",
+        description: "We'll get back to you shortly.",
       });
       setFormData({ name: '', email: '', phone: '', service: '', message: '' });
     } catch (error) {
@@ -81,7 +88,7 @@ const ContactSection = () => {
             Contact Us
           </h2>
           <p className="text-muted-foreground text-lg">
-            Have a project in mind? Reach out to us and we'll get back to you within 24 hours.
+            For quotations, service support, or inquiries, contact us today.
           </p>
         </div>
 
@@ -89,10 +96,10 @@ const ContactSection = () => {
           {/* Contact Info */}
           <div>
             <h3 className="font-display text-2xl font-bold text-navy mb-6">
-              Reach Out to Prime Solutions
+              Get in Touch with Prime Solutions
             </h3>
             <p className="text-muted-foreground mb-8">
-              Whether you need electrical work, plumbing services, printing solutions, or custom signage, we're here to help. Contact us today for a free consultation and quote.
+              Whether you need printing, branding, signage, HVAC, electrical, plumbing supplies, or custom solutions, we are here to help. Contact us today for a free consultation and quote.
             </p>
 
             <div className="space-y-6">
@@ -123,9 +130,12 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <div className="bg-card rounded-2xl p-8 shadow-card">
-            <h3 className="font-display text-2xl font-bold text-navy mb-6">
+            <h3 className="font-display text-2xl font-bold text-navy mb-2">
               Send Us a Message
             </h3>
+            <p className="text-muted-foreground mb-6 text-sm">
+              Please fill in the form below and our team will get back to you shortly.
+            </p>
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <Input
@@ -161,12 +171,13 @@ const ContactSection = () => {
                   className="w-full h-12 px-3 rounded-md border border-border bg-background text-foreground focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20"
                 >
                   <option value="">Select Service Required</option>
-                  <option value="electrical">Electrical</option>
-                  <option value="plumbing">Plumbing</option>
-                  <option value="printing">Printing</option>
-                  <option value="signages">Signages</option>
-                  <option value="acrylic">Acrylic</option>
-                  <option value="stationery">Stationery</option>
+                  <option value="printing">Printing & Branding</option>
+                  <option value="signages">Signages & Acrylic Works</option>
+                  <option value="hvac">HVAC Solutions</option>
+                  <option value="electrical">Electrical Supplies</option>
+                  <option value="plumbing">Plumbing Materials</option>
+                  <option value="ss-materials">SS Material Supply</option>
+                  <option value="stationery">Office Supplies</option>
                   <option value="multiple">Multiple Services</option>
                 </select>
               </div>

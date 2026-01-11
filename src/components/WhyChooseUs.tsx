@@ -1,30 +1,30 @@
-import { Building2, Award, IndianRupee, HeadphonesIcon, Truck } from 'lucide-react';
+import { Users, Clock, Award, IndianRupee, Building2 } from 'lucide-react';
 
 const reasons = [
   {
-    icon: Building2,
-    title: 'One-Stop Provider',
-    description: 'All your supplies and service needs under one roof',
+    icon: Users,
+    title: 'Experienced Professionals',
+    description: 'Skilled team with 15+ years of industry expertise',
+  },
+  {
+    icon: Clock,
+    title: 'Reliable & Timely Service',
+    description: 'We value your time and always deliver on schedule',
   },
   {
     icon: Award,
-    title: 'HVAC & Technical Expertise',
-    description: 'Skilled team with deep technical knowledge',
+    title: 'Quality Materials',
+    description: 'Only premium-grade materials for lasting results',
   },
   {
     icon: IndianRupee,
-    title: 'Affordable & Transparent',
-    description: 'Competitive rates with no hidden charges',
+    title: 'Affordable Pricing',
+    description: 'Competitive rates without compromising quality',
   },
   {
-    icon: Truck,
-    title: 'Quality Materials',
-    description: 'Only trusted brands and premium-grade products',
-  },
-  {
-    icon: HeadphonesIcon,
-    title: 'Reliable After-Sales',
-    description: 'Dedicated support even after project completion',
+    icon: Building2,
+    title: 'One-Stop Solution',
+    description: 'All your business service needs under one roof',
   },
 ];
 

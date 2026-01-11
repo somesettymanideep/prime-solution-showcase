@@ -8,21 +8,21 @@ import heroSlide3 from '@/assets/hero-slide-3.jpg';
 const slides = [
   {
     image: heroSlide1,
-    headline: 'Welcome to Prime Solutions',
-    subheadline: 'One Stop Solution for Supplies, Services & HVAC',
-    description: 'Complete supply and service solutions under one roof. From Printing, Branding & Signage services, HVAC systems to Electrical, Plumbing - we help businesses meet their requirements efficiently.',
+    headline: 'Complete Business Solutions',
+    subheadline: 'Your Trusted Partner for Excellence',
+    description: 'Transforming offices and commercial spaces with reliable electrical, plumbing, printing, and signage solutions across Hyderabad.',
   },
   {
     image: heroSlide2,
-    headline: 'Quality Products & Skilled Support',
-    subheadline: 'Your Trusted Partner in Hyderabad',
-    description: 'We deliver quality products, skilled technical support, competitive pricing, and timely delivery for residential, commercial, industrial, and institutional clients.',
+    headline: 'Expert Electrical & Plumbing',
+    subheadline: 'Professional Installation & Maintenance',
+    description: 'Our certified technicians deliver top-quality electrical and plumbing services for offices, institutions, and commercial establishments.',
   },
   {
     image: heroSlide3,
-    headline: 'Complete Business Solutions',
-    subheadline: 'Printing, HVAC, Electrical & More',
-    description: 'Professional Printing, Signage, Acrylic, HVAC, Electrical, Plumbing, SS Materials, and General Supplies - all your business needs covered.',
+    headline: 'Printing & Signage Excellence',
+    subheadline: 'From Design to Delivery',
+    description: 'High-quality printing, custom signages, acrylic fabrication, and premium stationery solutions for your business needs.',
   },
 ];
 
@@ -73,11 +73,11 @@ const HeroSlider = () => {
                 {slide.description}
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button variant="hero" size="xl" asChild>
-                  <a href="#contact">Get a Quote</a>
+                <Button variant="hero" size="xl">
+                  Get a Quote
                 </Button>
-                <Button variant="heroOutline" size="xl" asChild>
-                  <a href="#services">Our Services</a>
+                <Button variant="heroOutline" size="xl">
+                  Our Services
                 </Button>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, Globe } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
 const Footer = () => {
@@ -11,17 +11,17 @@ const Footer = () => {
   ];
 
   const services = [
-    { name: 'Printing & Branding', href: '#services' },
-    { name: 'Signages & Acrylic', href: '#services' },
-    { name: 'HVAC Solutions', href: '#services' },
-    { name: 'Electrical Supplies', href: '#services' },
-    { name: 'Plumbing Materials', href: '#services' },
-    { name: 'SS Materials', href: '#services' },
-    { name: 'Office Supplies', href: '#services' },
+    { name: 'Electrical', href: '#services' },
+    { name: 'Plumbing', href: '#services' },
+    { name: 'Printing', href: '#services' },
+    { name: 'Signages', href: '#services' },
+    { name: 'Acrylic', href: '#services' },
+    { name: 'Stationery', href: '#services' },
   ];
 
   const socialLinks = [
     { icon: Facebook, href: '#', label: 'Facebook' },
+    { icon: Twitter, href: '#', label: 'Twitter' },
     { icon: Instagram, href: '#', label: 'Instagram' },
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
   ];
@@ -35,11 +35,8 @@ const Footer = () => {
             {/* Company Info */}
             <div className="lg:col-span-1">
               <img src={logo} alt="Prime Solutions" className="h-14 mb-6" />
-              <p className="text-cream/70 leading-relaxed mb-4">
-                Prime Solutions is a Hyderabad-based multi-service company providing reliable Printing, Signage, Acrylic, HVAC, Electrical, Plumbing, SS Materials, and General Supplies.
-              </p>
-              <p className="text-cream/70 text-sm mb-6">
-                We focus on quality products, professional service, timely delivery, and customer satisfaction.
+              <p className="text-cream/70 leading-relaxed mb-6">
+                Your trusted business service provider in Hyderabad. Delivering excellence in electrical, plumbing, printing, signage, acrylic, and stationery solutions since 2009.
               </p>
               {/* Social Links */}
               <div className="flex gap-3">
@@ -96,24 +93,20 @@ const Footer = () => {
               <ul className="space-y-4">
                 <li className="flex gap-3">
                   <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                  <span className="text-cream/70">Hyderabad, Telangana</span>
+                  <span className="text-cream/70">
+                    123, Business Hub, Gachibowli, Hyderabad, Telangana 500032
+                  </span>
                 </li>
                 <li>
-                  <a href="tel:+919989120202" className="flex gap-3 text-cream/70 hover:text-gold transition-colors">
+                  <a href="tel:+919876543210" className="flex gap-3 text-cream/70 hover:text-gold transition-colors">
                     <Phone className="w-5 h-5 text-gold flex-shrink-0" />
-                    <span>9989120202</span>
+                    <span>+91 98765 43210</span>
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info.primesolutionshyd@gmail.com" className="flex gap-3 text-cream/70 hover:text-gold transition-colors">
+                  <a href="mailto:info@primesolutions.in" className="flex gap-3 text-cream/70 hover:text-gold transition-colors">
                     <Mail className="w-5 h-5 text-gold flex-shrink-0" />
-                    <span>info.primesolutionshyd@gmail.com</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.primesolutions4u.com" target="_blank" rel="noopener noreferrer" className="flex gap-3 text-cream/70 hover:text-gold transition-colors">
-                    <Globe className="w-5 h-5 text-gold flex-shrink-0" />
-                    <span>www.primesolutions4u.com</span>
+                    <span>info@primesolutions.in</span>
                   </a>
                 </li>
               </ul>

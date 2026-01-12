@@ -3,10 +3,10 @@ import { Printer, Layers, Wind, Zap, Droplets, BookOpen, Box, Wrench, X, Chevron
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 
-import servicePrinting from '@/assets/service-printing.jpg';
+import servicePrinting from '@/assets/printing-services.jpeg';
 import serviceSignage from '@/assets/service-signage.jpg';
 import serviceHvac from '@/assets/service-hvac.jpg';
-import serviceElectrical from '@/assets/service-electrical.jpg';
+import serviceElectrical from '@/assets/electral-spares.jpeg';
 import servicePlumbing from '@/assets/service-plumbing.jpg';
 import serviceStationery from '@/assets/service-stationery.jpg';
 import serviceSsMaterials from '@/assets/service-ss-materials.jpg';

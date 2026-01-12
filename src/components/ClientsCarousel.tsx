@@ -1,14 +1,38 @@
 import { useEffect, useRef } from 'react';
+import bet from '@/assets/bet.png';
+import bulb from '@/assets/bulb.png';
+import estd from '@/assets/estd.png';
+import mech from '@/assets/mech.png';
+import montessori from '@/assets/montessori.png';
+import rice from '@/assets/rice.png';
+import sathya from '@/assets/sathyasaischool.png';
+import ub from '@/assets/ub.png';
+import venkateswara from '@/assets/venkateswara.png';
+import broad from '@/assets/broadcom.png';
+import amaz from '@/assets/Amaz.png';
+import pio from '@/assets/pinooers.png';
+import met from '@/assets/metlife.png';
+import huh from '@/assets/huh.png';
+import tupp from '@/assets/tuppware.png';
+import micron from '@/assets/micron.png';
 
 const clients = [
-  { name: 'Client 1', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+1' },
-  { name: 'Client 2', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+2' },
-  { name: 'Client 3', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+3' },
-  { name: 'Client 4', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+4' },
-  { name: 'Client 5', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+5' },
-  { name: 'Client 6', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+6' },
-  { name: 'Client 7', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+7' },
-  { name: 'Client 8', logo: 'https://via.placeholder.com/150x80/1a365d/d4af37?text=Client+8' },
+  { name: 'Client 1', logo: bet },
+  { name: 'Client 2', logo: bulb },
+  { name: 'Client 3', logo: estd },
+  { name: 'Client 4', logo: mech },
+  { name: 'Client 5', logo: montessori },
+  { name: 'Client 6', logo: rice },
+  { name: 'Client 7', logo: sathya },
+  { name: 'Client 8', logo: ub },
+  { name: 'Client 8', logo: venkateswara },
+  { name: 'Client 9', logo: huh },
+  { name: 'Client 10', logo: amaz },
+  { name: 'Client 11', logo: tupp },
+  { name: 'Client 12', logo: micron },
+   { name: 'Client 11', logo: broad },
+  { name: 'Client 12', logo: met },
+   { name: 'Client 13', logo: pio },
 ];
 
 const ClientsCarousel = () => {
@@ -77,7 +101,9 @@ const ClientsCarousel = () => {
               <img
                 src={client.logo}
                 alt={client.name}
-                className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+               style={{height:"70px;"}
+               }
+                className="h-20 w-auto object-contain grayscale-0 hover:grayscale-0 transition-all duration-300"
               />
             </div>
           ))}

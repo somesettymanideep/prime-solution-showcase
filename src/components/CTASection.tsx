@@ -51,11 +51,11 @@ const CTASection = () => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <a
-              href="tel:+919876543210"
+              href="tel:+91 99891 20202"
               className="flex items-center gap-2 text-gold font-semibold hover:text-gold-light transition-colors"
             >
               <Phone className="w-5 h-5" />
-              <span>+91 98765 43210</span>
+              <span>+91 99891 20202</span>
             </a>
           </div>
         </div>

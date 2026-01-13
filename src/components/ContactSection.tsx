@@ -12,19 +12,19 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Address',
-    content: '123, Business Hub, Gachibowli, Hyderabad, Telangana 500032',
+    content: 'Balanagar, Hyderabad 500037',
   },
   {
     icon: Phone,
     title: 'Phone',
-    content: '+91 98765 43210',
-    link: 'tel:+919876543210',
+    content: '+91 99891 20202',
+    link: 'tel:+91 99891 20202',
   },
   {
     icon: MessageCircle,
     title: 'WhatsApp',
-    content: '+91 98765 43210',
-    link: 'https://wa.me/919876543210?text=Hello! I would like to inquire about your services.',
+    content: '+91 99891 20202',
+    link: 'https://wa.me/99891 20202?text=Hello! I would like to inquire about your services.',
     isExternal: true,
   },
   {

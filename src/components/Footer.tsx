@@ -94,7 +94,7 @@ const Footer = () => {
                 <li className="flex gap-3">
                   <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                   <span className="text-cream/70">
-                    123, Business Hub, Gachibowli, Hyderabad, Telangana 500032
+                    Balanagar, Hyderabad 500037
                   </span>
                 </li>
                 <li>

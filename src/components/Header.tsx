@@ -3,7 +3,7 @@ import { Menu, X, Phone, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import logo from '@/assets/logo.png';
 
-const WHATSAPP_NUMBER = '919876543210'; // Replace with actual number
+const WHATSAPP_NUMBER = '+91 99891 20202'; // Replace with actual number
 const WHATSAPP_MESSAGE = 'Hello! I would like to inquire about your services.';
 
 const Header = () => {
@@ -66,9 +66,12 @@ const Header = () => {
           >
             <MessageCircle className="w-5 h-5" />
           </a>
-          <Button variant="gold" size="default">
-            Get a Quote
-          </Button>
+         <a href="tel:98765 43210">
+  <Button variant="gold" size="default">
+    Get a Quote
+  </Button>
+</a>
+
         </div>
 
         {/* Mobile Menu Button */}
@@ -96,9 +99,9 @@ const Header = () => {
               </a>
             ))}
             <div className="pt-4 flex flex-col gap-3">
-              <a href="tel:+919876543210" className="flex items-center gap-2 text-gold">
+              <a href="tel:+91 99891 20202" className="flex items-center gap-2 text-gold">
                 <Phone className="w-4 h-4" />
-                <span className="font-medium">+91 98765 43210</span>
+                <span className="font-medium">+91 99891 20202</span>
               </a>
               <a
                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
@@ -109,9 +112,12 @@ const Header = () => {
                 <MessageCircle className="w-4 h-4" />
                 <span className="font-medium">Chat on WhatsApp</span>
               </a>
-              <Button variant="gold" size="lg" className="w-full">
-                Get a Quote
-              </Button>
+             <Button variant="gold" size="default" asChild>
+  <a href="tel:+91 99891 20202">
+    Get a Quote
+  </a>
+</Button>
+
             </div>
           </nav>
         </div>

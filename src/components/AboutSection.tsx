@@ -55,9 +55,7 @@ const AboutSection = () => {
               ))}
             </ul>
 
-            {/* <Button variant="navy" size="lg">
-              Read More
-            </Button> */}
+          
           </div>
         </div>
       </div>

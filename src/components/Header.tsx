@@ -56,10 +56,7 @@ const Header = () => {
 
         {/* CTA Button */}
         <div className="hidden lg:flex items-center gap-4">
-          <a href="tel:+919876543210" className="flex items-center gap-2 text-gold hover:text-gold/80 transition-colors">
-            <Phone className="w-4 h-4" />
-            <span className="font-medium">+91 98765 43210</span>
-          </a>
+         
           <a
             href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
             target="_blank"

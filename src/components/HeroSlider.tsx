@@ -8,9 +8,9 @@ import heroSlide3 from '@/assets/hero-slide-3.jpg';
 const slides = [
   {
     image: heroSlide1,
-    headline: 'Complete Business Solutions',
+    headline: 'Welcome to Prime Solutions',
     subheadline: 'Your Trusted Partner for Excellence',
-    description: 'Transforming offices and commercial spaces with reliable electrical, plumbing, printing, and signage solutions across Hyderabad.',
+    description: 'At Prime Solutions, we deliver complete supply and service solutions under one roof. From Printing,Branding & signage services, HVAC systems and electrical materials to plumbing',
   },
   {
     image: heroSlide2,

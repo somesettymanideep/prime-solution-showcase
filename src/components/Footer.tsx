@@ -104,9 +104,9 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@primesolutions.in" className="flex gap-3 text-cream/70 hover:text-gold transition-colors">
+                  <a href="mailto:info.primesolutionshyd@gmail.com" className="flex gap-3 text-cream/70 hover:text-gold transition-colors">
                     <Mail className="w-5 h-5 text-gold flex-shrink-0" />
-                    <span>info@primesolutions.in</span>
+                    <span>info.primesolutionshyd@gmail.com</span>
                   </a>
                 </li>
               </ul>

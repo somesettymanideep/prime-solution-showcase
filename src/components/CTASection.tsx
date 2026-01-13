@@ -34,7 +34,7 @@ const CTASection = () => {
           </div>
 
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-cream font-bold mb-6">
-            Get Professional Printing & Branding Support
+            Need Quality Supplies for Your Project?
           </h2>
           <p className="text-cream/80 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
             Contact Prime Solutions today for reliable printing, branding, and signage solutions that enhance your business visibility.

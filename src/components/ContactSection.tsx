@@ -5,6 +5,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from 'lucide-react';
 import { saveContactSubmission } from '@/lib/contactStorage';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
+
 
 const contactInfo = [
   {
@@ -28,8 +30,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    content: 'info@primesolutions.in',
-    link: 'mailto:info@primesolutions.in',
+    content: ' info.primesolutionshyd@gmail.com',
+    link: 'mailto: info.primesolutionshyd@gmail.com',
   },
   {
     icon: Clock,
@@ -49,27 +51,46 @@ const ContactSection = () => {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      saveContactSubmission(formData);
-      toast({
-        title: "Message Sent Successfully!",
-        description: "We'll get back to you within 24 hours.",
-      });
-      setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Something went wrong. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    await emailjs.send(
+      'service_7ydu67m',
+      'template_5g9dr1p',
+      {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message,
+      },
+      'HCoNchilic7imXmLW'
+    );
+
+    toast({
+      title: "Message Sent Successfully!",
+      description: "We'll get back to you within 24 hours.",
+    });
+
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      service: '',
+      message: '',
+    });
+  } catch (error) {
+    toast({
+      title: "Error",
+      description: "Failed to send message. Please try again.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <section id="contact" className="section-padding bg-background">
@@ -161,13 +182,13 @@ const ContactSection = () => {
                   className="w-full h-12 px-3 rounded-md border border-border bg-background text-foreground focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20"
                 >
                   <option value="">Select Service Required</option>
-                  <option value="electrical">Electrical</option>
-                  <option value="plumbing">Plumbing</option>
-                  <option value="printing">Printing</option>
-                  <option value="signages">Signages</option>
-                  <option value="acrylic">Acrylic</option>
-                  <option value="stationery">Stationery</option>
-                  <option value="multiple">Multiple Services</option>
+                  <option value="Electrical_Supplies">Electrical Supplies</option>
+                  <option value="Plumbing_Supplies">Plumbing Supplies</option>
+                  <option value="Printing_Branding">Printing, Branding </option>
+                  <option value="HVAC_Supplies">HVAC Supplies</option>
+                  <option value="Signages_Acrylic Works">Signages & Acrylic Works</option>
+                  <option value="Stationery_Office_Supplies">Stationery & Office Supplies</option>
+                  <option value="SS_Materials_Supply">SS Materials Supply</option>
                 </select>
               </div>
               <div>

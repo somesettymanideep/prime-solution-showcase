@@ -36,7 +36,7 @@ const AboutSection = () => {
           <div>
             <span className="text-gold font-medium uppercase tracking-wider text-sm">About Us</span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-navy font-bold mt-2 mb-6 gold-underline">
-              Your Trusted Business Partner in Hyderabad
+              Your Trusted Partner for Supplies & Services
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Prime Solutions is a trusted business service provider in Hyderabad offering electrical, plumbing, printing, signage, acrylic, and stationery solutions for offices, institutions, and commercial establishments.
